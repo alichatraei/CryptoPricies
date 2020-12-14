@@ -17,7 +17,13 @@ function eventListeners() {
     //get select box value
     const currency = document.querySelector("#currency").value,
       price = document.querySelector("#exchangeCurrency").value;
-    if (currency !== "" || price !== "") {
+
+    if (currency == "nSelected" || price == "nSelected")
+      ui.showError(
+        "لطفا مقادیر را انتخاب کنید",
+        "alert alert-danger text-center"
+      );
+    else {
       let exchangeValues = currencyApi.exchangeCurrencies(currency, price);
       ui.showExchange(exchangeValues);
     }

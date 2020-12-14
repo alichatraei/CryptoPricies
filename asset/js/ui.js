@@ -37,6 +37,7 @@ class UI {
       thead = document.querySelector("#thead-exchange"),
       exchangeNav = document.querySelector("#showExchangeCurrency"),
       img = document.createElement("img");
+    //show loading spinner
     img.setAttribute("src", "asset/images/spinner.gif");
     img.setAttribute("width", "50px");
     img.setAttribute("class", "text-center");
@@ -69,5 +70,14 @@ class UI {
       thead.innerHTML = "";
     }
   }
-  showError() {}
+  showError(message, className) {
+    let exchangeNav = document.querySelector("#showExchangeCurrency"),
+      p = document.createElement("p");
+    p.setAttribute("class", className);
+    p.textContent = message;
+    exchangeNav.appendChild(p);
+    setTimeout(() => {
+      p.remove();
+    }, 3000);
+  }
 }
