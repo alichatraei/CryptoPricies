@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قیمت آنلاین ارز دیجیتال</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body class="h-100 d-flex align-items-center">
+    <main class="container bg-light shadow rounded pt-3 pb-5">
+      <header class="row">
+        <p class="lead col-md-12 mt-4 mb-0 text-center">
+          قیمت لحظه ای ارز های دیجیتال
+        </p>
+      </header>
+      <hr />
+      <nav class="row justify-content-center" id="showCurrencies">
+        <table class="table table-striped text-center col-md-11 rounded">
+          <thead class="table-dark">
+            <tr>
+              <th>ارز دیجیتال</th>
+              <th>قیمت به دلار</th>
+              <th>تاریخ قیمت</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-showCurrency"></tbody>
+        </table>
+      </nav>
+      <hr />
+      <nav class="row justify-content-center">
+        <header class="lead col-md-12 col-sm-12 text-center">
+          تبدیل ارز ها
+        </header>
+        <hr class="w-50 mt-4" />
+        <main class="row col-md-12 text-right mx-2 align-items-center">
+          <nav class="col-md-4 col-sm-4 form-group">
+            <label for="currencyName" class="form-label">ارز</label>
+            <select name="currency" id="currency" class="form-control">
+              <option value="nSelected"><-انتخاب-></option>
+              <option value="BTC">بیتکوین</option>
+              <option value="ETH">اتریوم</option>
+              <option value="USDT">تتر</option>
+            </select>
+          </nav>
+          <nav class="col-md-4 col-sm-4 form-group">
+            <label for="exchangeName" class="form-label">تبدیل به</label>
+            <select
+              name="exchangeCurrency"
+              id="exchangeCurrency"
+              class="form-control"
+            >
+              <option value="nSelected"><-انتخاب-></option>
+              <option value="IRR">ریال</option>
+              <option value="USD">دلار</option>
+              <option value="EUR">یورو</option>
+            </select>
+          </nav>
+          <nav class="col-md-4 col-sm-4 d-flex align-items-center">
+            <button class="btn btn-primary btn-block" id="btnExchange">
+              تبدیل
+            </button>
+          </nav>
+        </main>
+      </nav>
+      <nav class="row justify-content-center" id="showExchangeCurrency">
+        <table class="table text-center table-striped mx-5">
+          <thead class="thead-dark" id="thead-exchange"></thead>
+          <tbody class="tbody-light" id="tbody-exchange"></tbody>
+        </table>
+      </nav>
+    </main>
+    <script src="asset/js/jQuery.js"></script>
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/CurrencyApi.js"></script>
+    <script src="asset/js/ui.js"></script>
+    <script src="asset/js/app.js"></script>
+  </body>
+</html>

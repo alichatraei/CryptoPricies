@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "iranSans";
+  src: url("../fonts/IRANSans-web.woff");
+}
+/* Rtl direction */
+* {
+  direction: rtl;
+  font-family: "iranSans";
+}
+/* HTML linear-background */
+html {
+  height: 100%;
+}
+body {
+  background-image: linear-gradient(
+    to left bottom,
+    #ffd744,
+    #ffcb35,
+    #ffbf27,
+    #ffb316,
+    #ffa600
+  );
+  
+  background-position: center;
+  background-size: cover;
+}
+/* table font size */
+table{
+    font-size: .9rem !important;
+}
